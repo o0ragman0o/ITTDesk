@@ -1,0 +1,30 @@
+<template name="unfilledOrders">
+  <h3>Unfilled Orders</h3>
+  <h4>
+          <span class="num-field">PRICE Ξ</span>
+          <span class="num-field">AMOUNT</span>
+          <span class="num-field">VALUE Ξ</span>
+  </h4>
+  <div class="Dapp-overflow">
+     <ul class="order-list unfilled">
+      {{#each unfilledOrders}}
+      <li class="priceQuote">
+        <button class="cancel modal {{swap}}">
+          <span class="num-field">{{price}}</span>
+          <span class="num-field">{{amount}}</span>
+          <span class="num-field">{{value}}</span>
+        </button>
+      </li>
+      {{/each}}
+    </ul>
+ </div>
+</template>
+
+<template name="confirmCancel">
+  <h3>Cancel Order</h3>
+  {{> dapp_identicon identity=address class="dapp-small"}} <h5>{{name}}</h5><br>
+  {{address}}<br>
+  <span class="{{swap}}">{{swap}}</span><br>
+  Price: &Xi;{{price}}<br>
+  Amount: {{amount}} {{symbol}}<br>
+</template>
