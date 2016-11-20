@@ -109,7 +109,7 @@ Template.orderForm.events({
 					 price: ittDict["orderFormPrice"].get(),
 					 amount: ittDict["orderFormAmount"].get(),
 					 total: ittDict["orderFormTotal"].get(),
-					 swap: ittDict["orderFormBid"].get(),
+					 swap: ittDict["orderFormAsk"].get(),
 					 address: ittDict["ittAddress"].get(),
 					 name: ittDict["name"].get(),
 					 symbol: ittDict["symbol"].get()
