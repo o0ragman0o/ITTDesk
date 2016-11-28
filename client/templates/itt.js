@@ -18,7 +18,7 @@ Template.itt.helpers({
 		return EthTools.formatNumber(ittDict["balanceOf"].get(),ittDict["format"].get());
 	},
 	etherBalanceOf: function () {
-		return ittDict["etherBalanceOf"].get();
+		return EthTools.formatNumber(ittDict["etherBalanceOf"].get(),'0,0.0[0000]');
 	},
 	symbol: function () {
 		return ittDict["symbol"].get();
@@ -37,9 +37,9 @@ Template.itt.events({
 })
 
 Template.ittList.helpers({
-	ittsummary: function () {
+	'ittsummary': function () {
 		var ret = [];
-		ittDict["itts"].get().forEach(function(e) {
+		ittDict.itts.get()[web3.version.network].forEach(function(e) {
 			ret.push(ittAPI.summary(e));
 		})
 		return ret;
@@ -49,7 +49,7 @@ Template.ittList.helpers({
 Template.ittList.events({
 	'click button.ittButton': function(){
 		ittDict["ittAddress"].set(this.address);
-		ittAPI.setITT();
+		ittAPI.ittInit(this.address); //setITT();
 		EthElements.Modal.hide();
 
 		console.log(this);

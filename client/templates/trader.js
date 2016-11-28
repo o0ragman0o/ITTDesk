@@ -12,7 +12,7 @@ Template.traderAccount.helpers({
 		return ittDict["account"].get().address;
 	},
 	balance: function () {
-		return ittDict["accountBalance"].get();
+		return EthTools.formatNumber(ittDict["accountBalance"].get(), "0,0.00[0000]");
 	},
 })
 

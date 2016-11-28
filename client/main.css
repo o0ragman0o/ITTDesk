@@ -170,7 +170,8 @@ ul {
 
 .trade-button {
 	width: 150px;
-	margin-top: 18.4px;
+  padding: 0 0 0 0;
+  margin: 18.4px 0 0 0;
 	/*display: inline;*/
 	text-align: center;
   border: 2px solid;
@@ -259,6 +260,7 @@ ul {
   transition: 0.25s;
 }
 
+
 .order-list li button.selected {
   border-bottom: 3px solid #4a90e2;
   /*margin-bottom: 3px;*/
@@ -271,6 +273,10 @@ ul {
 /*.order-list li button:hover {*/
   border-bottom-width: 3px;
   margin-bottom: -3px;
+}
+
+.canceledOrder li {
+  text-transform: line-through; 
 }
 
 
@@ -299,7 +305,6 @@ input[type=number] {
 
 label {
 
-  /*} + input[type=number]{*/
   position: relative;
   margin-top: -100;
 }

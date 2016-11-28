@@ -1,7 +1,11 @@
 <template name="sales">
+<h3>Sales</h3>
 	<ul>
+		{{#each sales}}
 		<li>
-			{{sales}}
+			<span class="num-field">&Xi;{{dapp_formatBalance price "0,0.00[0000]" "ether"}}</span>
+			<span class="num-field">{{dapp_formatNumber amount "0,0.000[0000]"}}</span>
 		</li>
+		{{/each}}
 	</ul>
 </template>

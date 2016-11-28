@@ -21,7 +21,7 @@
         {{> dapp_identicon identity=address class="dapp-medium"}}
         <h3>{{name}}</h3>
         <span>{{address}}</span>
-        <h3>&Xi; {{balance}}</h3>
+        <h3>&Xi; {{dapp_formatBalance balance "0,0.00[0000]" "ether"}}</h3>
       </button>
     </li>  
     {{/each}}

@@ -53,6 +53,7 @@ Template.unfilledOrders.events({
 				symbol: ittDict["symbol"].get(),
 			}
 		});
+		e.target.classList.add("canceledOrder");
 	},
 })
 

@@ -1,4 +1,4 @@
-ITT = web3.eth.contract([{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"etherBalanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_ether","type":"uint256"}],"name":"withdraw","outputs":[{"name":"success_","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getBook","outputs":[{"name":"","type":"uint256[]"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_price","type":"uint256"}],"name":"cancel","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_price","type":"uint256"},{"name":"_trader","type":"address"}],"name":"getAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"addr","type":"address"}],"name":"getOpenOrdersOf","outputs":[{"name":"","type":"uint256[]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"addr","type":"address"}],"name":"numOrdersOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_askPrice","type":"uint256"},{"name":"_amount","type":"uint256"},{"name":"_make","type":"bool"}],"name":"sell","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"contractBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_side","type":"bool"}],"name":"spread","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_trading","type":"bool"}],"name":"setTrading","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_price","type":"uint256"}],"name":"getPriceVolume","outputs":[{"name":"v_","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_bidPrice","type":"uint256"},{"name":"_amount","type":"uint256"},{"name":"_make","type":"bool"}],"name":"buy","outputs":[{"name":"","type":"bool"}],"payable":true,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"amounts","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"l","type":"uint256"}],"name":"sizeOf","outputs":[{"name":"s","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimalPlaces","outputs":[{"name":"","type":"uint8"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_list","type":"uint256"},{"name":"_node","type":"uint256"}],"name":"getNode","outputs":[{"name":"","type":"uint256[2]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"trading","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"inputs":[{"name":"_totalSupply","type":"uint256"},{"name":"_decimalPlaces","type":"uint8"},{"name":"_symbol","type":"string"},{"name":"_name","type":"string"}],"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"price","type":"uint256"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":true,"name":"trader","type":"address"}],"name":"Ask","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"price","type":"uint256"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":true,"name":"trader","type":"address"}],"name":"Bid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"price","type":"uint256"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":true,"name":"buyer","type":"address"},{"indexed":true,"name":"seller","type":"address"}],"name":"Sale","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"trading","type":"bool"}],"name":"Trading","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"message","type":"string"}],"name":"Log","type":"event"}]);
+ITT = web3.eth.contract([{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"etherBalanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_ether","type":"uint256"}],"name":"withdraw","outputs":[{"name":"success_","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getBook","outputs":[{"name":"","type":"uint256[]"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_price","type":"uint256"}],"name":"cancel","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_price","type":"uint256"},{"name":"_trader","type":"address"}],"name":"getAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"getOpenOrdersOf","outputs":[{"name":"","type":"uint256[]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"numOrdersOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_askPrice","type":"uint256"},{"name":"_amount","type":"uint256"},{"name":"_make","type":"bool"}],"name":"sell","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"contractBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_side","type":"bool"}],"name":"spread","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_trading","type":"bool"}],"name":"setTrading","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_price","type":"uint256"}],"name":"getPriceVolume","outputs":[{"name":"v_","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_bidPrice","type":"uint256"},{"name":"_amount","type":"uint256"},{"name":"_make","type":"bool"}],"name":"buy","outputs":[{"name":"","type":"bool"}],"payable":true,"type":"function"},{"constant":true,"inputs":[{"name":"l","type":"uint256"}],"name":"sizeOf","outputs":[{"name":"s","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimalPlaces","outputs":[{"name":"","type":"uint8"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_list","type":"uint256"},{"name":"_node","type":"uint256"}],"name":"getNode","outputs":[{"name":"","type":"uint256[2]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"trading","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"inputs":[{"name":"_totalSupply","type":"uint256"},{"name":"_decimalPlaces","type":"uint8"},{"name":"_symbol","type":"string"},{"name":"_name","type":"string"}],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"price","type":"uint256"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":true,"name":"trader","type":"address"}],"name":"Ask","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"price","type":"uint256"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":true,"name":"trader","type":"address"}],"name":"Bid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"price","type":"uint256"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":true,"name":"buyer","type":"address"},{"indexed":true,"name":"seller","type":"address"}],"name":"Sale","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"trading","type":"bool"}],"name":"Trading","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"message","type":"string"}],"name":"Log","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"oldOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"ChangedOwner","type":"event"}]);
 
 
 ittDict = {
@@ -51,8 +51,8 @@ ittAPI = {
 		ret["address"] = addr;
 		ret["name"] = ITT.at(addr).name();
 		ret["symbol"] = ITT.at(addr).symbol();
-		ret["balanceOf"] = ITT.at(addr).balanceOf(ittDict["address"].get());
-		ret["etherBalanceOf"] = web3.fromWei(ITT.at(addr).etherBalanceOf(ittDict["address"].get()),'ether');
+		ret["balanceOf"] = this.toPlaces(ITT.at(addr).balanceOf(ittDict["address"].get()));
+		ret["etherBalanceOf"] = EthTools.formatBalance(ITT.at(addr).etherBalanceOf(ittDict["address"].get()),'0,0.0[0000] unit', EthTools.getUnit());
 		return ret;
 	},
 	'updateDesk'() {
@@ -225,55 +225,73 @@ ittAPI = {
 	'itts' (ittsArray) {
 		ittDict["itts"].set(ittsArray);
 	},
-}
-
-
-function itt_init(ittAddress) {
-	ittAPI.setTradeAccount(EthAccounts.findOne());
-	ittDict["ittAddress"].set(ittAddress);
-	ittAPI.setITT();
-	ittDict["latestBlock"].set(web3.eth.getBlock("latest"));
-	ittDict["orderMinPrice"].set(ittAPI.fromPlaces(web3.fromWei(new BigNumber(2), "ether")));
-	ittDict["priceStep"].set(ittAPI.fromPlaces(web3.fromWei(new BigNumber(1), "ether")));
-	ittDict["orderMinAmount"].set(ittAPI.toPlaces(new BigNumber(1)));
-	ittDict["amountStep"].set(ittAPI.toPlaces(new BigNumber(1)));
-	ittDict["totalStep"].set(ittAPI.toPlaces(new BigNumber(1)));
-	ittDict["format"].set("0,0." + "00000000000000000000000000000000".slice(-ittDict["decimalPlaces"].get()))
-	ittDict["accounts"].set(EthAccounts.find().fetch());
-	ittDict["orderMake"].set(true);
-	ittDict["orderFormPrice"].set(ittDict["highestBid"].get());
-	ittDict["orderFormAmount"].set(new BigNumber(1));
-    ittDict["orderFormAsk"].set(ittDict["orderFormPrice"].get().gt(ittDict["highestBid"].get()) ?
-      "ASK" : "SELL");
-    ittDict["orderFormBid"].set(ittDict["orderFormPrice"].get().lt(ittDict["lowestAsk"].get()) ?
-      "BID" : "BUY");
-    itt.Sale({}, {fromBlock0: 0, toBlock: 'latest'}).watch(function(e, log) {
-    	if(!e) {
-    		console.log('Sale: ' + log.args.price.toNumber(), 
-    			' Volume: ' + log.args.amount.toNumber());
-    		Sales.upsert('tx_' + log.transactionHash, {
-    			blockNumber: log.blockNumber,
-    			timeStamp: web3.eth.getBlock(log.blockNumber).timeStamp,
-    			price: log.args.price,
-    			amount: log.args.amount,
-    		})
-    	}
-    })
+	'ittInit' (ittAddress) {
+		this.setTradeAccount(EthAccounts.findOne());
+		ittDict["ittAddress"].set(ittAddress);
+		ittAPI.setITT();
+		ittDict["latestBlock"].set(web3.eth.getBlock("latest"));
+		ittDict["orderMinPrice"].set(ittAPI.fromPlaces(web3.fromWei(new BigNumber(2), "ether")));
+		ittDict["priceStep"].set(ittAPI.fromPlaces(web3.fromWei(new BigNumber(1), "ether")));
+		ittDict["orderMinAmount"].set(ittAPI.toPlaces(new BigNumber(1)));
+		ittDict["amountStep"].set(ittAPI.toPlaces(new BigNumber(1)));
+		ittDict["totalStep"].set(ittAPI.toPlaces(new BigNumber(1)));
+		ittDict["format"].set("0,0." + "00000000000000000000000000000000".slice(-ittDict["decimalPlaces"].get()))
+		ittDict["accounts"].set(EthAccounts.find().fetch());
+		ittDict["orderMake"].set(true);
+		ittDict["orderFormPrice"].set(ittDict["highestBid"].get());
+		ittDict["orderFormAmount"].set(new BigNumber(1));
+	    ittDict["orderFormAsk"].set(ittDict["orderFormPrice"].get().gt(ittDict["highestBid"].get()) ?
+	      "ASK" : "SELL");
+	    ittDict["orderFormBid"].set(ittDict["orderFormPrice"].get().lt(ittDict["lowestAsk"].get()) ?
+	      "BID" : "BUY");
+	    // Sales.remove({});
+	    // itt.Sale({}, {fromBlock: 0, toBlock: 'latest'}).watch(function(e, log) {
+	    // 	if(!e) {
+	    // 		console.log('Sale: ' + log.args.price.toNumber(), 
+	    // 			' Volume: ' + log.args.amount.toNumber());
+	    // 		Sales.upsert('tx_' + log.transactionHash, {
+	    // 			blockNumber: log.blockNumber,
+	    // 			timeStamp: web3.eth.getBlock(log.blockNumber).timeStamp,
+	    // 			price: log.args.price,
+	    // 			amount: log.args.amount,
+	    // 		})
+	    // 	}
+	    // })
+	}
 }
 
 accounts = EthAccounts.find().fetch();
-ittAPI.itts(["0x3c41f2f97a27ba5dc1fcd54e63f099bfdb3ddc4e",
-		"0x9224947628dce297a0adf69863fea3974a3fdfc6",
-		"0x59798c5cf9533515d1cb18d51b5ea32d8473a493", // ver 0.3.4
-		"0x335d03146f2118ff8dfc3a5cdc33e18895199400", // ver 0.3.4-take 2
-		"0x6fbc5df020f6a421bf6896a2024d253c1ed21e33", // ver 0.3.5
-		"0xe28e14b430c45805fe22c330e672f3fe7f806225", // ver 0.3.6
-		"0x384f1bbfe63c252e2a0ddc3f097fc01de8b81ceb", // PTT ver 0.3.6-alpha
-		"0x2d9ad468e44006d30bb4e4b4bc2aaaf5abb0b959", // PTT ver 0.3.6-beta
-		])
+ittDict.itts.set({108:[
+		// "0x3c41f2f97a27ba5dc1fcd54e63f099bfdb3ddc4e",
+		// "0x9224947628dce297a0adf69863fea3974a3fdfc6",
+		// "0x59798c5cf9533515d1cb18d51b5ea32d8473a493", // ver 0.3.4
+		// "0x335d03146f2118ff8dfc3a5cdc33e18895199400", // ver 0.3.4-take 2
+		// "0x6fbc5df020f6a421bf6896a2024d253c1ed21e33", // ver 0.3.5
+		// "0xe28e14b430c45805fe22c330e672f3fe7f806225", // ver 0.3.6
+		// "0x384f1bbfe63c252e2a0ddc3f097fc01de8b81ceb", // PTT ver 0.3.6-alpha
+		// "0x2d9ad468e44006d30bb4e4b4bc2aaaf5abb0b959", // PTT ver 0.3.6-beta
+		],
+		3:[
+		// "0xd0198d2a9c2e4474bcbe5514b196cb367d5da790", // buggy ITTdr ver 0.3.6 Ropsten 0.4.5+commit.b318366e.Emscripten.clang
+		"0xa9e001bebe4b281f7229b0305f553ab3c511fef5", // ITTdr ver 0.3.6 Ropsten 0.4.6+commit.2dabbdf0.Emscripten.clang
+		]
+	});
 
-itt_init("0x6fbc5df020f6a421bf6896a2024d253c1ed21e33");
+ittAPI.ittInit(ittDict.itts.get()[web3.version.network][0]);
 
 web3.eth.filter().watch(function () {
 	ittAPI.updateDesk();
 });
+
+// itt.Sale({},{fromBlock: 0, toBlock: 'latest'}).watch(function(e, log) {
+//     if(!e) {
+//         console.log('Sale!'+ web3.fromWei(log.args.price), ittAPI.toPlaces(log.args.amount).toNumber());
+
+//         // add the transaction to our collection
+//         Sales.upsert('tx_'+ log.transactionHash ,{
+//             price: log.args.price.toNumber(),
+//             amount: log.args.amount.toNumber(),
+//             blockNumber: log.blockNumber
+//         });
+//     }
+// });
