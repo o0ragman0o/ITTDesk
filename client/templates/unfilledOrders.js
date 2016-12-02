@@ -22,21 +22,6 @@ Template.unfilledOrders.helpers({
 })
 
 Template.unfilledOrders.events({
-	// 'click li.priceQuote': function(){
-	// 	self = this
-	// 	EthElements.Modal.question({
-	// 		template: "confirmCancel",
-	// 		ok: function(e, t) { ittAPI.cancel(self.price); },
-	// 		cancel: true,
-	// 		data: {
-	// 			price: self.price,
-	// 			amount: self.amount,
-	// 			swap: self.swap,
-	// 			name: ittDict["name"].get(),
-	// 			symbol: ittDict["symbol"].get(),
-	// 		}
-	// 	});
-	// },
 	"click li.priceQuote": function (e, t) {
 		e.preventDefault();
 		self = this;
@@ -53,26 +38,5 @@ Template.unfilledOrders.events({
 				symbol: ittDict["symbol"].get(),
 			}
 		});
-		e.target.classList.add("canceledOrder");
 	},
 })
-
-// Template.confirmCancel.helpers({
-// 	'price': function (e, t) {
-// 		return ittAPI.fromPlaces(web3.fromWei(orders[i],"ether"));
-// 	},
-// 	'amount': function (e, t) {
-// 		return ittAPI.toPlaces(orders[i+1]);
-// 	},
-// 	'swap': function (e, t) {
-// 		price.gt(ittDict["highestBid"].get()) ? "ask" : "bid";
-// 	}
-
-// })
-
-// Template.confirmCancel.events({
-// 	'click button.cancel': function(e, t) {
-// 		ittAPI.cancel(this.price);
-// 	}
-// })
-

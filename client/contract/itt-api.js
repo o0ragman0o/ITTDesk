@@ -51,7 +51,7 @@ ittAPI = {
 		ret["address"] = addr;
 		ret["name"] = ITT.at(addr).name();
 		ret["symbol"] = ITT.at(addr).symbol();
-		ret["balanceOf"] = this.toPlaces(ITT.at(addr).balanceOf(ittDict["address"].get()));
+		ret["balanceOf"] = this.toPlaces(ITT.at(addr).balanceOf(ittDict["address"].get()), ITT.at(addr).decimalPlaces());
 		ret["etherBalanceOf"] = EthTools.formatBalance(ITT.at(addr).etherBalanceOf(ittDict["address"].get()),'0,0.0[0000] unit', EthTools.getUnit());
 		return ret;
 	},
@@ -208,12 +208,14 @@ ittAPI = {
 		})
 		return
 	},
-	'toPlaces' (bnum) {
-		return bnum.shift(-ittDict["decimalPlaces"].get());
+	'toPlaces' (bnum, places) {
+	    places = typeof places === 'undefined' ? ittDict["decimalPlaces"].get() : places;
+	    return bnum.shift(-places);
+		// return bnum.shift(-ittDict["decimalPlaces"].get());
 	},
-
-	'fromPlaces' (bnum) {
-		return bnum.shift(ittDict["decimalPlaces"].get());
+	'fromPlaces' (bnum, places) {
+	    places = typeof places === 'undefined' ? ittDict["decimalPlaces"].get() : places;
+		return bnum.shift(places);
 	},
 	'setTradeAccount' (acc) {
 		ittDict["account"].set(acc);
@@ -261,7 +263,16 @@ ittAPI = {
 }
 
 accounts = EthAccounts.find().fetch();
-ittDict.itts.set({108:[
+ittDict.itts.set({
+		1:[
+		 // "0xb9a357e214a134a156278fa978e15323d2c293e3" // ITTdl ver 0.3.6 Live 0.4.5+commit.b318366e.Emscripten.clang
+		 "0xa15c784319fa96d3E36cFE97fbadD89Ec704A8dc",
+		],
+		3:[
+		// "0xd0198d2a9c2e4474bcbe5514b196cb367d5da790", // compiler bug - ITTdr ver 0.3.6 Ropsten 0.4.5+commit.b318366e.Emscripten.clang
+		"0xa9e001bebe4b281f7229b0305f553ab3c511fef5", // ITTdr ver 0.3.6 Ropsten 0.4.6+commit.2dabbdf0.Emscripten.clang
+		],
+		108:[	// private chain
 		// "0x3c41f2f97a27ba5dc1fcd54e63f099bfdb3ddc4e",
 		// "0x9224947628dce297a0adf69863fea3974a3fdfc6",
 		// "0x59798c5cf9533515d1cb18d51b5ea32d8473a493", // ver 0.3.4
@@ -271,10 +282,6 @@ ittDict.itts.set({108:[
 		// "0x384f1bbfe63c252e2a0ddc3f097fc01de8b81ceb", // PTT ver 0.3.6-alpha
 		// "0x2d9ad468e44006d30bb4e4b4bc2aaaf5abb0b959", // PTT ver 0.3.6-beta
 		],
-		3:[
-		// "0xd0198d2a9c2e4474bcbe5514b196cb367d5da790", // buggy ITTdr ver 0.3.6 Ropsten 0.4.5+commit.b318366e.Emscripten.clang
-		"0xa9e001bebe4b281f7229b0305f553ab3c511fef5", // ITTdr ver 0.3.6 Ropsten 0.4.6+commit.2dabbdf0.Emscripten.clang
-		]
 	});
 
 ittAPI.ittInit(ittDict.itts.get()[web3.version.network][0]);
